@@ -184,4 +184,4 @@ Github에 드래그를 해서 파일을 업로드하면 원격 저장소에서 �
 > .gitignore의 내용을 쉽게 작성할 수 있도록 도와주는 두 개의 사이트를 소개합니다. 자신의 개발 환경에 맞는 것을 찾아서 `전체 복사, 붙여넣기`를 하면 됩니다.
 1. [웹사이트](https://www.toptal.com/developers/gitignore)
 2. [gitignore 저장소](https://github.com/github/gitignore)
-3. [Python에 대한 .gitignore 예시]
+3. ![Python에 대한 .gitignore 예시](2022-02-25-00-48-52.png)
