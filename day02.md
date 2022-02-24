@@ -1,5 +1,6 @@
 # 2022.02.24 Git hub 특강
-
+## 5) Github
+---
 ## [1] Github 가입하기
 
 ### (1) 회원 가입
@@ -151,6 +152,36 @@ Github에 드래그를 해서 파일을 업로드하면 원격 저장소에서 �
 ```
 
 5. git push를 그림으로 이해하기
-![](2022-02-25-00-21-37.png)
-
+![사진](2022-02-25-00-21-37.png)
 > 로컬 저장소의 commit 이력이 원격 저장소에 그대로 반영됩니다.
+
+## 6) .gitignore
+## [1] .gitignore
+> 특정 파일 혹은 폴더에 대해 Git이 버전 관리를 하지 못 하도록 지정하는 것
+
+### (1) .gitignore에 작성하는 목록
+- 민감한 개인 정보가 담긴 파일 (전화번호, 계좌번호, 각종 비밀번호,API KEY 등)
+- OS(운영체제)에서 활용되는 파일
+- IDE(통합 개발 환경 - pycharm) 혹은 Text editor(vscode) 등에서 활용되는 파일
+   - ex) pycharm -> .idea/
+- 개발 언어(python) 혹은 프레임워크(django)에서 사용되는 파일
+   - 가상 환경: `venv/`
+   - `__pycache_/`
+
+### (2) .gitignore 작성 시 주의사항
+- 반드시 이름을 `.gitigonre`로 작성합니다. 앞의 점(.)은 숨김 파일이라는 뜻입니다.
+- `.gitignore`파일은 `.git`폴더와 동일한 위치에 생성합니다.
+- **제외하고 싶은 파일은 반드시 `git add`전에 `.gitignore`에 작성합니다.**
+```python
+# 왜 git add 전에 .gitignore에 작성해야 할까요?
+`git add a.txt`라고 작성하면, 이제 git은 `a.txt`를 버전 관리의 대상으로 여깁니다.
+한 번 버전 관리의 대상이 된 `a.txt`는 이후에 .gitignore에 작성하더라도 무시되지 않고 계속 버전 관리의 대상으로 인식됩니다.
+
+따라서 제외하고 싶은 파일은 반드시 git add 전에 .gitignore에 작성해야 합니다.
+```
+
+### (3) .gitignore 쉽게 작성하기
+> .gitignore의 내용을 쉽게 작성할 수 있도록 도와주는 두 개의 사이트를 소개합니다. 자신의 개발 환경에 맞는 것을 찾아서 `전체 복사, 붙여넣기`를 하면 됩니다.
+1. [웹사이트](https://www.toptal.com/developers/gitignore)
+2. [gitignore 저장소](https://github.com/github/gitignore)
+3. [Python에 대한 .gitignore 예시]
