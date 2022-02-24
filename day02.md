@@ -29,7 +29,7 @@
 3. Github의 주요 목적 중 하나인 `협업`을 위해 로컬 저장소와 원격 저장소의 연동방법을 학습합니다.
 
 ### (1) Github에서 원격 저장소 생성
-![](2022-02-24-23-18-47.png)]
+![](2022-02-24-23-18-47.png)
 1. 화면 오른쪽 상단 더하기(+) 버튼을 누르고 New Repository를 클릭합니다.
 2. 저장소의 이름, 설명, 공개여부를 선택하고 create repository를 클릭합니다
 > 체크박스는 건드리지 않습니다!
@@ -95,6 +95,7 @@ $ git add day02.md
 ```
 ```bash
 $ git commit -m "Upload TIL Day2"
+
 [master (root-commit) f3d6d42] Upload TIL Day1
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 day1.md
@@ -128,6 +129,7 @@ f3d6d42 (HEAD -> master) Upload TIL Day2
 - 이후 git push 완료
 ```bash
 $ git push -u origin master
+
 info: please complete authentication in your browser...
 Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
@@ -152,6 +154,7 @@ Github에 드래그를 해서 파일을 업로드하면 원격 저장소에서 �
 ```
 
 5. git push를 그림으로 이해하기
+
 ![사진](2022-02-25-00-21-37.png)
 > 로컬 저장소의 commit 이력이 원격 저장소에 그대로 반영됩니다.
 
@@ -197,13 +200,14 @@ Github에 드래그를 해서 파일을 업로드하면 원격 저장소에서 �
 - `git clone <원격 저장소 주소>`의 형태로 작성합니다.
 ```bash
 $ git clone https://github.com/jiyeonil/TIL.git
+
 Cloning into 'TIL'...
 remote: Enumerating objects: 3, done.
 remote: Counting objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
 Receiving objects: 100% (3/3), done.
 ```
-@@ 위에 작성한 대로 실행하면, `Github의 jiyeonil이라는 계정의 TIL 원격 저장소를 복제`하여 내 컴퓨터에 TIL이라는 이름의 로컬 저장소를 생성하게 됩니다.
+위에 작성한 대로 실행하면, `Github의 jiyeonil이라는 계정의 TIL 원격 저장소를 복제`하여 내 컴퓨터에 TIL이라는 이름의 로컬 저장소를 생성하게 됩니다.
 - git clone을 통해 생성된 로컬 저장소는 `git init`과 `git remote add`가 이미 수행되어 있습니다.
 
 ### (2) git pull 
@@ -212,6 +216,7 @@ Receiving objects: 100% (3/3), done.
 - `git pull <저장소 이름> <브랜치 이름>`의 형태로 작성합니다.
 ```bash
 $ git pull origin master
+
 From https://github.com/edukyle/git-practice
  * branch            master     -> FETCH_HEAD
 Updating 6570ecb..56809a9
@@ -232,10 +237,11 @@ clone과 pull은 모두 원격 저장소로부터 가져오는 명령어이지�
 
 `git pull`은 git push처럼 로컬 저장소와 원격 저장소의 내용을 **동기화**하고 싶다면 언제든 사용합니다. 
 단, push는 로컬 저장소의 변경 내용을 원격 저장소에 반영하는 것이고, pull은 원격 저장소의 변경 내용을 로컬 저장소에 반영하는 것입니다.***즉, 방향이 다릅니다!***
+```
 
 ## [2] 내 컴퓨터 <-> Github(원격저장소) <-> 강의장 컴퓨터
 > 2개 이상의 로컬 저장소에서 하나의 원격 저장소에 접근하면 어떻게 될까요?
-@@집과 강의 장을 오가면서 `clone, push, pull`하는 과정을 살펴보겠습니다.
+집과 강의 장을 오가면서 `clone, push, pull`하는 과정을 살펴보겠습니다.
 
 ### (1) 규칙
 - 수업 때는 2개의 폴더를 `"내 컴퓨터"`와 `"강의장 컴퓨터"`라고 가정합니다.
@@ -296,7 +302,8 @@ $ git pull origin master
 ```
 - 결과
 ![](2022-02-25-01-26-40.png)
-@@이제 내 컴퓨터, Github, 강의장 컴퓨터의 내용은 동일합니다.
+이제 내 컴퓨터, Github, 강의장 컴퓨터의 내용은 동일합니다.
+
 - **주의 사항(글 만으로는 이해하기 어려우니, 직접 보여주면서 수업합니다.**
 ```python
 # 만약 TIL-home에서 pull이 아니라 commit을 먼저한 후 pull을 하면 어떻게 될까요?
@@ -320,10 +327,15 @@ To https://github.com/edukyle/TIL-remote.git
 
 error: failed to push some refs to 'https://github.com/edukyle/TIL-remote.git'
 
-원격 저장소의 내용을 먼저 받아오지 않고, 로컬 저장소에서 새로운 커밋을 생성했기 때문에 서로의 커밋 내역이 달라져서 그렇습니다.
+원격 저장소의 내용을 먼저 받아오지 않고, 
+로컬 저장소에서 새로운 커밋을 생성했기 때문에 
+서로의 커밋 내역이 달라져서 그렇습니다.
 
-만약 로컬 저장소와 원격 저장소의 내용이 다르다면, 일단 git pull을 통해 동기화를 시키고 새로운 커밋을 쌓아 나가야 합니다.
+만약 로컬 저장소와 원격 저장소의 내용이 다르다면, 
+일단 git pull을 통해 동기화를 시키고 
+새로운 커밋을 쌓아 나가야 합니다.
 ```
 
-> 로컬 저장소 내용과 원격 저장소 내용이 달라서 충돌이 생긴다면, 일단 1) pull로 끌어오고 2) 옵션(local 선택, Remote 선택, 둘다 선택, 둘다 선택 X) 3) 저장 - add - commit - push 단계로 업로드
+> 로컬 저장소 내용과 원격 저장소 내용이 달라서 충돌이 생긴다면, 
+일단 1) pull로 끌어오고 2) 옵션(local 선택, Remote 선택, 둘다 선택, 둘다 선택 X) 3) 저장 - add - commit - push 단계로 업로드해야 합니다.
 
