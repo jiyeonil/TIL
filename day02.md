@@ -41,7 +41,8 @@
 user@LAPTOP-OQJECPU4 MINGW32 ~/TIL
 $ git init
 Initialized empty Git repository in C:/Users/jiyeonil/TIL/.git/
-
+```
+```bash
 4. `git remote`
 - 로컬 저장소에 원격 저장소를 `등록, 조회, 삭제`할 수 있는 명령어
    1. git remote add <이름> <주소>
@@ -50,5 +51,5 @@ Initialized empty Git repository in C:/Users/jiyeonil/TIL/.git/
    [풀이] 
    git 명령어를 작성할건데, remote(원격 저장소)에 add(추가)한다. 
    origin이라는 이름으로 https://github.com/jiyeonil/TIL.git라는 주소의 원격 저장소를
-
+```
 
