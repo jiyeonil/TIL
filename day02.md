@@ -29,3 +29,18 @@
 
 ### (1) Github에서 원격 저장소 생성
 ![](2022-02-24-23-18-47.png)]
+1. 화면 오른쪽 상단 더하기(+) 버튼을 누르고 New Repository를 클릭합니다.
+2. 저장소의 이름, 설명, 공개여부를 선택하고 create repository를 클릭합니다
+> 체크박스는 건드리지 않습니다!
+
+### (2) 로컬저장소와 원격 저장소 연결
+1. 원격 저장소가 잘 생성되었는지 확인 후, 저장소의 주소를 복사합니다.
+2. 기존 실습 때 만들었던 홈 디렉토리의 TIL 폴더로 가서 vscode를 엽니다.
+3. git init을 통해 TIL 폴더를 로컬 저장소로 만들어 줍니다.
+```bash
+user@LAPTOP-OQJECPU4 MINGW32 ~/TIL
+$ git init
+Initialized empty Git repository in C:/Users/jiyeonil/TIL/.git/
+
+
+
